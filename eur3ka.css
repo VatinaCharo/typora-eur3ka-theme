@@ -1,0 +1,473 @@
+:root {
+    --title-font: "Inter Display", "Inter";
+    --note-color: #004d40;
+    --warn-color: #8a2a0d;
+    --question-color: #d6107a;
+    --note-filled: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M14%203C15.5977%203%2016.9037%204.24892%2016.9949%205.82373L17%206V10H13L12.8237%2010.0051C11.3072%2010.093%2010.093%2011.3072%2010.0051%2012.8237L10%2013V17H6C4.40232%2017%203.09634%2015.7511%203.00509%2014.1763L3%2014V6C3%204.40232%204.24892%203.09634%205.82373%203.00509L6%203H14ZM16.9007%2011.001C16.8232%2011.2376%2016.7018%2011.459%2016.5416%2011.6528L16.4142%2011.7929L11.7929%2016.4142C11.5687%2016.6384%2011.2968%2016.8039%2011.001%2016.9007L11%2013L11.0055%2012.8507C11.078%2011.8676%2011.8612%2011.0821%2012.8433%2011.006L13%2011L16.9007%2011.001Z%22%20fill%3D%22%23004d40%22/%3E%0A%3C/svg%3E%0A");
+    --warn-filled: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M8.68569%202.85232L2.12696%2014.7773C1.57714%2015.777%202.30038%2017.0002%203.44129%2017.0002H16.5587C17.6996%2017.0002%2018.4229%2015.777%2017.8731%2014.7773L11.3143%202.85232C10.7444%201.81615%209.25558%201.81616%208.68569%202.85232ZM10%206.75016C10.4142%206.75016%2010.75%207.08595%2010.75%207.50016V11.5002C10.75%2011.9144%2010.4142%2012.2502%2010%2012.2502C9.58579%2012.2502%209.25%2011.9144%209.25%2011.5002V7.50016C9.25%207.08595%209.58579%206.75016%2010%206.75016ZM10.75%2013.7502C10.75%2014.1644%2010.4142%2014.5002%2010%2014.5002C9.58579%2014.5002%209.25%2014.1644%209.25%2013.7502C9.25%2013.3359%209.58579%2013.0002%2010%2013.0002C10.4142%2013.0002%2010.75%2013.3359%2010.75%2013.7502Z%22%20fill%3D%22%238a2a0d%22/%3E%0A%3C/svg%3E%0A");
+    --question-filled: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M2.00001%2010C2.00001%205.58172%205.58173%202%2010%202C14.4183%202%2018%205.58172%2018%2010C18%2014.4183%2014.4183%2018%2010%2018C8.65078%2018%207.37829%2017.6656%206.26225%2017.0748L2.62128%2017.9851C2.45089%2018.0277%202.27065%2017.9777%202.14646%2017.8536C2.02227%2017.7294%201.97234%2017.5491%202.01494%2017.3787L2.92518%2013.7378C2.33442%2012.6217%202.00001%2011.3492%202.00001%2010ZM9.25027%207.30723C9.40317%207.13358%209.64031%207%2010%207C10.3597%207%2010.5968%207.13358%2010.7497%207.30723C10.9113%207.49072%2011%207.74463%2011%208C11%208.31707%2010.9286%208.52273%2010.8337%208.68547C10.7328%208.85858%2010.5985%208.99908%2010.4106%209.19559L10.3885%209.21878C10.2003%209.41576%209.96787%209.66319%209.79142%2010.0002C9.61017%2010.3464%209.5%2010.7611%209.5%2011.2929C9.5%2011.5691%209.72386%2011.7929%2010%2011.7929C10.2761%2011.7929%2010.5%2011.5691%2010.5%2011.2929C10.5%2010.9085%2010.5773%2010.6551%2010.6773%2010.4641C10.7821%2010.2639%2010.9247%2010.1051%2011.1115%209.90956L11.1528%209.86652C11.3225%209.68963%2011.5347%209.46855%2011.6976%209.18921C11.8839%208.86964%2012%208.48947%2012%208C12%207.52689%2011.8387%207.0308%2011.5003%206.64641C11.1532%206.25219%2010.6403%206%2010%206C9.35969%206%208.84683%206.25219%208.49973%206.64641C8.16129%207.0308%208%207.52689%208%208C8%208.27614%208.22386%208.5%208.5%208.5C8.77614%208.5%209%208.27614%209%208C9%207.74463%209.08871%207.49072%209.25027%207.30723ZM10.6995%2013.5126C10.6995%2013.1262%2010.3863%2012.813%209.99989%2012.813C9.61352%2012.813%209.30029%2013.1262%209.30029%2013.5126C9.30029%2013.899%209.61352%2014.2122%209.99989%2014.2122C10.3863%2014.2122%2010.6995%2013.899%2010.6995%2013.5126Z%22%20fill%3D%22%23880e4f%22/%3E%0A%3C/svg%3E%0A");
+}
+
+/* 全局属性 */
+#write {
+    max-width: 860px;
+    font-size: 1rem;
+    color: black;
+    padding: 0 10px;
+    line-height: 1.6;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    word-break: break-word;
+    word-wrap: break-word;
+    text-align: left;
+    font-family: "CaskaydiaCove NF", 'Microsoft YaHei', Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*段落*/
+#write+p,
+#write blockquote p {
+    font-size: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin: 0;
+    line-height: 1.5rem;
+    color: black;
+}
+
+#write div[mdtype=toc] {
+    font-size: 1rem;
+}
+
+/*标题*/
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    margin: 1.2em 0 1em;
+    padding: 0px;
+    font-weight: bold;
+    color: black;
+}
+
+#write h1 {
+    font-size: 1.8rem;
+}
+
+#write h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgb(239, 112, 96);
+}
+
+#write h2 span {
+    display: inline-block;
+    font-weight: bold;
+    background: rgb(239, 112, 96);
+    color: #ffffff;
+    padding: 3px 10px 1px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    margin-right: 3px;
+}
+
+#write h2:after {
+    display: inline-block;
+    content: "";
+    vertical-align: bottom;
+    border-bottom: 1.25rem solid #efebe9;
+    border-right: 1.25rem solid transparent;
+}
+
+#write h3 {
+    font-size: 1.3rem;
+    color: rgb(239, 112, 96);
+    border-bottom: 1px solid rgb(239, 112, 96);
+}
+
+#write h3:before {
+    content: "[ ";
+    color: rgb(239, 112, 96);
+}
+
+#write h3:after {
+    content: " ]";
+    color: rgb(239, 112, 96);
+}
+
+#write h4 {
+    font-size: 1.2rem;
+    color: rgb(239, 112, 96);
+}
+
+#write h5 {
+    font-size: 1.1rem;
+}
+
+#write h6 {
+    font-size: 1rem;
+}
+
+/* 引用内标题 */
+#write blockquote>h1:first-child,
+#write blockquote>h5:first-child,
+#write blockquote>h6:first-child {
+    font: var(--title-font);
+    font-weight: 700;
+    font-size: inherit !important;
+    margin: -12px -16px -8px -16px;
+    padding: 12px 16px 8px 16px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    display: flex;
+    align-items: center;
+    letter-spacing: auto !important;
+}
+
+#write blockquote>h1:first-child {
+    color: var(--note-color);
+}
+
+#write blockquote>h1:first-child:before {
+    background-image: var(--note-filled);
+    vertical-align: middle;
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+#write blockquote>h5:first-child {
+    color: var(--warn-color);
+}
+
+#write blockquote>h5:first-child:before {
+    background-image: var(--warn-filled);
+    vertical-align: middle;
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+#write blockquote>h6:first-child {
+    color: var(--question-color);
+}
+
+#write blockquote>h6:first-child:before {
+    background-image: var(--question-filled);
+    vertical-align: middle;
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+/*列表*/
+#write ul,
+#write ol {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    color: black;
+}
+
+#write ul {
+    list-style-type: disc;
+}
+
+#write ul ul {
+    list-style-type: square;
+}
+
+#write ol {
+    list-style-type: decimal;
+}
+
+#write li section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.7rem;
+    text-align: left;
+    color: rgb(1, 1, 1);
+    /* 只要是纯黑色微信编辑器就会把color这个属性吞掉。。。*/
+    font-weight: 500;
+}
+
+/*引用*/
+#write blockquote {
+    display: block;
+    font-size: .9em;
+    overflow: auto;
+    border-left: 3px solid rgb(239, 112, 96);
+    color: #6a737d;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: #fff9f9;
+}
+
+/* 加粗 */
+strong {
+    padding: 0.1em;
+    color: #E91E63;
+    font-weight: 600;
+}
+
+
+/* 斜体强调 */
+em {
+    font-style: normal;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: rgb(240, 148, 21);
+}
+
+/*链接*/
+#write a {
+    text-decoration: none;
+    word-wrap: break-word;
+    font-weight: bold;
+    border-bottom: 1px solid #1e6bb8;
+    color: rgb(239, 112, 96);
+    border-bottom: 1px solid rgb(239, 112, 96);
+}
+
+/*行内代码*/
+#write p code,
+#write li code {
+    font-size: .9rem;
+    word-wrap: break-word;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin: 0 2px;
+    color: rgb(239, 112, 96);
+    ;
+    background-color: rgba(27, 31, 35, .05);
+    font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+    word-break: break-all;
+}
+
+/*图片*/
+#write img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#write span img {
+    display: inline-block;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+/*表格*/
+#write table {
+    display: table;
+    text-align: left;
+}
+
+#write tbody {
+    border: 0;
+}
+
+#write table tr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    background-color: white;
+}
+
+#write table tr:nth-child(2n) {
+    background-color: #F8F8F8;
+}
+
+#write table tr th,
+#write table tr td {
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+#write table tr th {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+/* 行内代码 */
+#write span code, #write li code {
+    color: rgb(239, 112, 96);
+}
+
+/* 脚注上标 */
+#write .md-footnote {
+    font-weight: bold;
+    color: rgb(239, 112, 96);
+}
+
+#write .md-footnote>.md-text:before {
+    content: '['
+}
+
+#write .md-footnote>.md-text:after {
+    content: ']'
+}
+
+/* 脚注 */
+#write .md-def-name {
+    padding-right: 1.8ch;
+}
+
+#write .md-def-name:before {
+    content: '[';
+    color: #000;
+}
+
+#write .md-def-name:after {
+    content: "]";
+    color: #000;
+}
+
+/* 代码块主题 */
+.md-fences:before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-color: #282c34;
+    margin-bottom: -7px;
+    border-radius: 5px;
+    background-position: 10px 10px;
+}
+
+/* CodeMirror 相关内容 */
+.CodeMirror-wrap .CodeMirror-scroll {
+    overflow-x: auto;
+}
+
+.cm-s-inner.CodeMirror {
+    padding: .5rem;
+    background-color: #292d3e;
+    color: #a6accd;
+    font-family: Consolas;
+    border-radius: 4px;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #c792ea !important;
+}
+
+.cm-s-inner .cm-operator {
+    color: #89ddff !important;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #eeffff !important;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+    color: #f07178 !important;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #ffcb6b !important;
+}
+
+.cm-s-inner .cm-atom {
+    color: #f78c6c !important;
+}
+
+.cm-s-inner .cm-number {
+    color: #ff5370 !important;
+}
+
+.cm-s-inner .cm-def {
+    color: #82aaff !important;
+}
+
+.cm-s-inner .cm-string {
+    color: #c3e88d !important;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f07178 !important;
+}
+
+.cm-s-inner .cm-comment {
+    color: #676e95 !important;
+}
+
+.cm-s-inner .cm-variable {
+    color: #f07178 !important;
+}
+
+.cm-s-inner .cm-tag {
+    color: #ff5370 !important;
+}
+
+.cm-s-inner .cm-meta {
+    color: #ffcb6b !important;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #c792ea !important;
+}
+
+.cm-s-inner .cm-property {
+    color: #c792ea !important;
+}
+
+.cm-s-inner .cm-qualifier {
+    color: #decb6b !important;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+    color: #decb6b !important;
+}
+
+.cm-s-inner .cm-error {
+    color: rgba(255, 255, 255, 1) !important;
+    background-color: #ff5370 !important;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid rgb(239, 112, 96);
+    z-index: 3;
+}
+
+.cm-s-inner div.CodeMirror-selected {
+    background: rgba(167, 178, 189, 0.2) !important;
+}
+
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+    background: rgba(167, 178, 189, 0.2) !important;
+}
+
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+    background-color: rgba(167, 178, 189, 0.0) !important;
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+    background-color: rgba(167, 178, 189, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::selection {
+    background-color: rgba(167, 178, 189, 0.2);
+}
